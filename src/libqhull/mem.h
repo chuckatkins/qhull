@@ -207,6 +207,10 @@ struct qhmemT {               /* global memory management variables */
 
 /*=============== prototypes in alphabetical order ============*/
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void *qh_memalloc(int insize);
 void qh_memcheck(void);
 void qh_memfree(void *object, int insize);
@@ -218,5 +222,9 @@ void qh_memsetup(void);
 void qh_memsize(int size);
 void qh_memstatistics(FILE *fp);
 void qh_memtotal(int *totlong, int *curlong, int *totshort, int *curshort, int *maxlong, int *totbuffer);
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* qhDEFmem */

@@ -113,6 +113,10 @@ struct mergeT {         /* initialize in qh_appendmergeset */
 
 /*============ prototypes in alphabetical order after pre/postmerge =======*/
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void    qh_premerge(vertexT *apex, realT maxcentrum, realT maxangle);
 void    qh_postmerge(const char *reason, realT maxcentrum, realT maxangle,
              boolT vneighbors);
@@ -174,5 +178,9 @@ void    qh_updatetested( facetT *facet1, facetT *facet2);
 setT   *qh_vertexridges(vertexT *vertex);
 void    qh_vertexridges_facet(vertexT *vertex, facetT *facet, setT **ridges);
 void    qh_willdelete(facetT *facet, facetT *replace);
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* qhDEFmerge */

@@ -98,6 +98,10 @@
 
 /*============= prototypes in alphabetical order, infrequent at end ======= */
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void    qh_backnormal(realT **rows, int numrow, int numcol, boolT sign, coordT *normal, boolT *nearzero);
 void    qh_distplane(pointT *point, facetT *facet, realT *dist);
 facetT *qh_findbest(pointT *point, facetT *startfacet,
@@ -170,7 +174,8 @@ boolT   qh_sethalfspace(int dim, coordT *coords, coordT **nextp,
 coordT *qh_sethalfspace_all(int dim, int count, coordT *halfspaces, pointT *feasible);
 pointT *qh_voronoi_center(int dim, setT *points);
 
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
+
 #endif /* qhDEFgeom */
-
-
-

@@ -77,6 +77,10 @@ typedef void (*printvridgeT)(FILE *fp, vertexT *vertex, vertexT *vertexA, setT *
 
 /*============== -prototypes in alphabetical order =========*/
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void    qh_dfacet(unsigned id);
 void    qh_dvertex(unsigned id);
 int     qh_compare_facetarea(const void *p1, const void *p2);
@@ -155,5 +159,9 @@ coordT *qh_readpoints(int *numpoints, int *dimension, boolT *ismalloc);
 void    qh_setfeasible(int dim);
 boolT   qh_skipfacet(facetT *facet);
 char   *qh_skipfilename(char *filename);
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* qhDEFio */

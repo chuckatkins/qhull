@@ -904,6 +904,3 @@ stop after qh_JOGGLEmaxretry attempts
 #include <crtdbg.h>
 #endif
 #endif /* qh_DEFuser */
-
-
-

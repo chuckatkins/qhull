@@ -447,6 +447,10 @@ struct setT {
 
 /*======= prototypes in alphabetical order ============*/
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void  qh_setaddsorted(setT **setp, void *elem);
 void  qh_setaddnth(setT **setp, int nth, void *newelem);
 void  qh_setappend(setT **setp, void *elem);
@@ -486,5 +490,8 @@ void  qh_settruncate(setT *set, int size);
 int   qh_setunique(setT **set, void *elem);
 void  qh_setzero(setT *set, int idx, int size);
 
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* qhDEFset */

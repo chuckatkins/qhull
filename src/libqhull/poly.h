@@ -204,6 +204,9 @@
 */
 #define FOREACHvertexreverse12_(vertices) FOREACHsetelementreverse12_(vertexT, vertices, vertex)
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /*=============== prototypes poly.c in alphabetical order ================*/
 
@@ -292,5 +295,8 @@ setT   *qh_vertexintersect_new(setT *vertexsetA,setT *vertexsetB);
 void    qh_vertexneighbors(void /*qh.facet_list*/);
 boolT   qh_vertexsubset(setT *vertexsetA, setT *vertexsetB);
 
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* qhDEFpoly */

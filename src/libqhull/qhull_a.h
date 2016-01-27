@@ -109,6 +109,10 @@ inline void qhullUnused(T &x) { (void)x; }
 #  define QHULL_UNUSED(x) (void)x;
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /***** -libqhull.c prototypes (alphabetical after qhull) ********************/
 
 void    qh_qhull(void);
@@ -146,5 +150,9 @@ void    qh_allstatG(void);
 void    qh_allstatH(void);
 void    qh_freebuffers(void);
 void    qh_initbuffers(coordT *points, int numpoints, int dim, boolT ismalloc);
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* qhDEFqhulla */

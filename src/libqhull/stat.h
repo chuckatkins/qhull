@@ -518,6 +518,10 @@ struct qhstatT {
 
 /*========== function prototypes ===========*/
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void    qh_allstatA(void);
 void    qh_allstatB(void);
 void    qh_allstatC(void);
@@ -539,5 +543,9 @@ void    qh_printstatistics(FILE *fp, const char *string);
 void    qh_printstatlevel(FILE *fp, int id);
 void    qh_printstats(FILE *fp, int idx, int *nextindex);
 realT   qh_stddev(int num, realT tot, realT tot2, realT *ave);
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif   /* qhDEFstat */
